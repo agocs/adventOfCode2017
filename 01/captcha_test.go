@@ -31,16 +31,16 @@ func TestOtherSum(t *testing.T){
 	}
 
 	testCases := []testCase {
-		{in: []int{1, 1, 2, 2}, expected: 6},
-		{in: []int{1, 2, 1, 2}, expected: 0},
+		{in: []int{1, 2, 1, 2}, expected: 6},
+		{in: []int{1, 2, 2, 1}, expected: 0},
 		{in: []int{1, 2, 3, 4, 2, 5}, expected: 4},
 		{in: []int{1,2,3,1,2,3}, expected: 12},
 		{in: []int{1,2,1,3,1,4,1,5}, expected: 4},
 	}
 
 	for i, tc := range testCases{
-		if sum(tc.in) != tc.expected{
-			t.Errorf("Test %d failed. Expected %d, got %d", i, tc.expected, sum(tc.in))
+		if otherSum(tc.in) != tc.expected{
+			t.Errorf("Test %d failed. Expected %d, got %d", i, tc.expected, otherSum(tc.in))
 		}
 	}
 }

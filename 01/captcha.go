@@ -21,6 +21,7 @@ func main (){
 	}
 
 	fmt.Println(sum(arrInput))	
+	fmt.Println(otherSum(arrInput))	
 
 }
 
